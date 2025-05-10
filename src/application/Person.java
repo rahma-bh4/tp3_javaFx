@@ -1,43 +1,48 @@
 package application;
 
 public class Person {
-
-	private String prenom;
-	private String nom;
+	// Make sure the field names match exactly what's being used in the PropertyValueFactory
+	private String firstName;
+	private String lastName;
 	private String email;
 	
-	
-	public Person(String prenom, String nom, String email) {
-		super();
-		this.prenom = prenom;
-		this.nom = nom;
+	public Person(String firstName, String lastName, String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.email = email;
 	}
+	
 	public Person() {
-		super();
-		// TODO Auto-generated constructor stub
+		// Default constructor
 	}
-	public String getPrenom() {
-		return prenom;
+	
+	// These getter and setter methods must match exactly what JavaFX expects
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
+	
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getNom() {
-		return nom;
+	
+	public String getLastName() {
+		return lastName;
 	}
-	public void setNom(String nom) {
-		this.nom = nom;
+	
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
+	
 	public String getEmail() {
 		return email;
 	}
+	
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
 	@Override
 	public String toString() {
-		return "Person [prenom=" + prenom + ", nom=" + nom + ", email=" + email + "]";
+		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
 	}
-	
 }

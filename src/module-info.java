@@ -1,3 +1,4 @@
+
 module tp4 {
 	requires javafx.controls;
 	requires javafx.graphics;
@@ -7,5 +8,6 @@ module tp4 {
 	//requires javafx.swing;
 	//requires javafx.web;
 	
-	opens application to javafx.graphics, javafx.fxml;
+	// The key fix - open application package to both javafx.graphics, javafx.fxml AND javafx.base
+	opens application to javafx.graphics, javafx.fxml, javafx.base;
 }
